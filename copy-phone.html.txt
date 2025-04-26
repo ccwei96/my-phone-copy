@@ -1,0 +1,10 @@
+<a href="tel:+1234567890" onclick="copyPhone(event, '+1234567890')">点击复制电话号码</a>
+
+<script>
+  function copyPhone(event, phoneNumber) {
+    event.preventDefault(); // 阻止默认拨号行为
+    navigator.clipboard.writeText(phoneNumber).then(() => {
+      alert("电话号码已复制: " + phoneNumber);
+    });
+  }
+</script>
